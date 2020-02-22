@@ -1,0 +1,89 @@
+.o-btn {
+    @extend %anim;
+    display: inline-flex;
+    @extend %flex-xy;
+    @extend %rel;
+    white-space: nowrap;
+    text-align: center;
+    font-family: $text;
+    cursor: pointer;
+    
+    &--major {
+        height: 70px;
+        padding: 0 70px;
+        border-radius: 35px;
+        
+        @media ( max-width: $base + 80px ) {            
+        	height: 60px;
+        	font-size: rem(18);
+        	padding: 0 base(70);
+        }
+        
+        @media ( max-width: $tablet + px ) {
+        	padding: 0 40px;
+        }
+    }
+    
+    &--minor {
+        height: 40px;
+        padding: 0 25px;
+        border-radius: 20px;
+    }
+
+	&--blue {
+    	background-color: $c-primary;
+    	color: white;
+	}
+	
+	&--shadow {
+    	box-shadow: 14px 9px 18px rgba($c-primary, .24);
+	}
+	
+	.icon-arrow-right {
+    	margin-left: 20px;
+    	margin-top: 6px;
+    	font-size: rem(12);
+    	
+    	&:before {
+        	@extend %anim;
+			display: inline-block;
+        }
+	}
+}
+
+a.o-btn,
+button.o-btn {
+    
+    .desktop & {
+    
+    &--blue {
+        &:hover {
+            background-color: darken($c-primary, 5%);
+        }
+    }
+    
+    &--outline {
+        
+        &:hover {
+            background-color: $c-primary;
+            border-color: $c-primary !important;
+            color: white;
+        }        
+    }
+    
+    &:hover {
+
+		.icon-arrow-right {
+			&:before {
+    			transform: translate3d(5px, 0, 0);
+			}
+		}
+    }
+    }
+}
+
+button.o-btn {
+    span {
+        width: 100%;
+    }
+}

@@ -1,0 +1,113 @@
+html:not(.ie) {
+    .is-loaded {
+        .anim {
+            &--delay1 {
+                transition-delay: 150ms;
+            }
+            
+            &--delay2 {
+                transition-delay: 250ms;
+            }
+            
+            &--delay3 {
+                transition-delay: 350ms;
+            }
+            
+            &--delay4 {
+                transition-delay: 450ms;
+            }
+            
+            &--delay5 {
+                transition-delay: 500ms;
+            }
+            
+            &--delay6 {
+                transition-delay: 550ms;
+            }
+            
+            &--delay7 {
+                transition-delay: 600ms;
+            }
+            
+            &--delay8 {
+                transition-delay: 650ms;
+            }
+            
+            &--delay9 {
+                transition-delay: 700ms;
+            }
+            
+            &--delay10 {
+                transition-delay: 750ms;
+            }
+            
+            &--delay11 {
+                transition-delay: 800ms;
+            }
+    
+            transition: all 600ms ease-out;
+            opacity: 0;
+            
+            
+            
+            &--left {
+                transform: translate3d(-50px, 0, 0);
+            }
+            
+            &--right {
+                transform: translate3d(50px, 0, 0);
+            }
+            
+            &--scale {
+                transform: scale3d(0, 1, 1);
+            }
+            
+            &--up {
+                transform: translate3d(0, 50px, 0);
+            }
+            
+            &--visible {
+                transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+                opacity: 1;
+            }
+        }
+    }
+    
+    hr.anim {
+        opacity: 1;
+        transition: all 1600ms ease-out;
+    }
+}
+
+
+.is-hidden {
+    display: none;
+}
+
+
+
+// Text
+
+.aligncenter {
+    text-align: center;
+}
+
+.color-primary {
+    color: var(--primary-color);
+}
+
+.u-cover {
+    transition: all 500ms ease-out;
+    opacity: 1;
+    
+    .is-loaded & {
+        opacity: 0;
+    }
+}
+
+
+// Backgrounds
+
+.bg-gray {
+}
+

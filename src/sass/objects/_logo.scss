@@ -1,0 +1,12 @@
+.o-logo {
+	@extend %rel;
+	@include z-index(logo);
+    display: block;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    font: {
+        size: rem(24);
+        weight: $black;
+    }
+    color: white;
+}

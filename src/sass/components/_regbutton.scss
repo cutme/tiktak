@@ -1,0 +1,24 @@
+.c-regbutton {
+    margin-left: 30px;
+
+    .o-btn {
+        border: 1px solid rgba(white, .35);
+        font-size: rem(14);
+        color: rgba(white, .7);
+        
+        i {
+            font-size: rem(18);
+            color: rgba(white, .6);
+            
+            @media ( min-width: $smartphone_portrait + 1px ) {
+                margin-right: 10px;
+            }
+        }   
+        
+        span {
+            @media ( max-width: $smartphone_portrait + px ) {
+            	display: none;
+            }
+        }     
+    }
+}

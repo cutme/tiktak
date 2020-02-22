@@ -1,0 +1,18 @@
+.c-homeslider {
+    .o-wave {
+        
+        &__article {
+            padding-top: 60px;
+            padding-bottom: 120px;
+            
+            @media ( max-width: $desktop + px ) {
+            	padding-bottom: desktop(120);
+            }
+        }
+        
+        &__image {
+            background-image: url(../img/photos/homeslider.jpg);
+        }
+    }
+}
+

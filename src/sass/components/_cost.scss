@@ -1,0 +1,18 @@
+.c-cost {
+    .o-wave {
+        
+        &__article {
+            padding-top: 20px;
+            padding-bottom: 180px;
+            
+            @media ( max-width: $tablet + px ) {
+            	padding: 0 0 80px 0;
+            }
+        }
+        
+        &__image {
+            background-image: url(../img/photos/cost.jpg);
+        }
+    }
+}
+

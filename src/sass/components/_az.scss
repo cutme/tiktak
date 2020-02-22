@@ -1,0 +1,47 @@
+.c-az {
+    background: {
+        image: url(../img/waves/az.png);
+        size: cover;
+        position: center bottom;
+    }
+    padding: {
+        bottom: 180px;
+        top: 90px;
+    }
+    
+    @media ( max-width: $base + 80px ) {
+    	padding: {
+            bottom: base(180);
+            top: base(90);
+        }
+    }
+    
+    &__icons {
+        @extend %flex;
+        margin-bottom: 50px;
+        
+        li {
+            padding: 0 120px;
+            
+            img {
+                align-self: baseline;
+            }
+            
+            @media ( max-width: $base + 80px ) {
+            	padding: 0 base(120);
+            }
+            
+            @media ( max-width: $tablet + px ) {
+            	padding: 0 60px;
+            }
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	padding: 0 30px;
+            }
+            
+            @media ( max-width: $smartphone + px ) {
+            	padding: 0 10px;
+            }
+        }
+    }
+}

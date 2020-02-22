@@ -1,0 +1,25 @@
+.o-article {
+    
+    h1 {
+        @extend %lead--1;
+        margin-bottom: 1em;
+        text-transform: uppercase;
+        font-weight: $regular;
+    }
+    
+    p {
+        line-height: 1.5em;
+        
+        @media ( max-width: $base + 80px ) {
+        	font-size: base(24);
+        }        
+        
+        @media ( max-width: $tablet + px ) {
+        	font-size: rem(18);
+        }
+                
+        @media ( max-width: $smartphone_portrait + px ) {
+        	font-size: rem(16);
+        }
+    }
+}

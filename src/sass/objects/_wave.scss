@@ -1,0 +1,51 @@
+.o-wave {
+    @extend %rel;
+    max-width: 2000px;
+    
+    margin: 0 auto;
+    
+    @media ( min-width: $tablet_portrait + 1px ) {
+        min-height: 800px;
+    }
+    
+    &__article {
+            
+        .o-wrap {
+            @extend %flex;
+            @extend %flex-wrap;
+            @extend %flex-xy;
+            @extend %rel;
+            z-index: 10;
+            height: 100vh;
+            color: white;
+            
+//            @media ( min-width: $tablet_portrait + 1px ) {
+                     	
+  //          }
+            
+            @media ( max-width: $desktop + px ) {
+                width: 100%;
+            	padding-bottom: desktop(120);
+            }
+            
+            .o-btn {
+                border: 1px solid rgba(white, .8);
+            }
+        }
+    }
+    
+    &__image {
+        @extend %abs;
+        left: 0; top: 0; z-index: 1;
+        width: 100%; height: 100%;
+        background: {
+            size: cover;
+            position: center top;
+        }
+    }
+    
+    &__wave {
+        @extend %abs; z-index: 5;
+        left: 0; bottom: 0;
+    }
+}

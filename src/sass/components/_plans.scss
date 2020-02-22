@@ -1,0 +1,19 @@
+.c-plans {
+    background: {
+        image: url(../img/waves/plan.png);
+        repeat: no-repeat;
+        size: 2000 auto;
+        position: center top;
+    }
+    padding: {
+        top: 110px;
+        bottom: 120px;
+    }
+    
+    @media ( max-width: $desktop + px ) {
+    	padding: {
+            top: 110px;
+            bottom: desktop(120);
+        }
+    }
+}

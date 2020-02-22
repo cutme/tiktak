@@ -1,0 +1,137 @@
+.c-box {
+    max-width: 620px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 14px 0 74px rgba(#223fbb, .12);
+    margin: 0 auto;
+    overflow: hidden;
+
+    &__benefits {
+        padding-left: 50px;
+        margin-bottom: 80px;
+        
+        @media ( max-width: $tablet + px ) {
+            margin-bottom: 60px;
+        }
+        
+        @media ( max-width: $smartphone + px ) {
+        	padding-left: 0;
+        }
+
+        li {
+            @extend %rel;
+            margin-bottom: 10px;
+            padding-left: 50px;
+            font-weight: $regular;
+            
+            @media ( max-width: $tablet + px ) {
+            	font-size: rem(18);
+            	padding-left: 40px;
+            }
+                    
+            @media ( max-width: $smartphone_portrait + px ) {
+                margin-bottom: 5px;
+            	font-size: rem(16);
+            }
+            
+            &:before {
+                @extend %abs-pseudo;
+                @extend %flex;
+                @extend %flex-xy;
+                top: 6px;
+                left: 0;
+                width: 28px; height: 28px;
+                border: 3px solid $c-primary;
+                border-radius: 50%;
+                padding-top: 2px;
+                font: {
+                    family: $icomoon;
+                    size: rem(9);
+                }
+                color: $c-green-01;
+                content: "\e906";
+                
+                @media ( max-width: $tablet + px ) {
+                    top: 2px;
+                    width: 24px; height: 24px;
+                    border-width: 2px;
+                }
+            }
+        }
+    }
+    
+    &__content {
+        padding: 60px grid(110, 620) 40px grid(110, 620);
+        
+        @media ( max-width: $smartphone + px ) {
+            padding: 40px 20px;
+        }
+    }
+    
+    &__copyrights {
+        font-size: rem(18);
+        color: $c-gray-04;
+        
+        @media ( max-width: $tablet + px ) {
+            font-size: rem(16);
+        }
+        
+        a {
+            @extend %ulink;
+            color: $c-primary;
+            
+            &:before, &:after {
+                background-color: $c-primary;
+            }
+        }
+    }
+    
+    &__header {
+        padding: 40px 0;
+        text-align: center;
+        box-shadow: 14px 0 74px rgba(#223fbb, .12);
+    }
+    
+    .o-btn {
+        width: 100%;
+        margin-bottom: 45px;
+    }
+    
+    .icon {
+        width: 50px;
+        margin: 0 auto 20px auto;
+    }
+    
+    .pricebox {
+        @extend %flex;
+        @extend %flex-x;
+        @extend %flex-column;
+        height: 134px;
+        background-color: $c-gray-02;
+        border-radius: 67px;
+        margin-bottom: 50px;
+        text-align: center;  
+        
+        @media ( max-width: $tablet + px ) {
+            height: 100px;
+        }
+
+        .date {
+            font-weight: $regular;
+            color: $c-gray-04;
+        }
+        
+        .price {
+            @extend %lead--1;
+            font-weight: $black;
+            text-transform: none;
+            color: $c-primary;
+        }
+    }
+    
+    .title {
+        @extend %lead--2;
+        text-transform: uppercase;
+        font-weight: $black;
+    }
+}
